@@ -18,6 +18,7 @@ package com.example.android.diceroller
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -43,18 +44,17 @@ class MainActivity : AppCompatActivity() {
 
     // text of the TextView
     private fun rollDice(){
-        //  In rollDice get a Random int between 1 and 6
-
-        // Se mete en la variable numeroAleatorio un numero aleatorio del 1 al 6
-        val numeroAleatorio =Random().nextInt(6)+1
-        //  In rollDice use findViewById to get a reference to the TextView
-        // and assign it to an inmutable variable called resultText
-        // Se accede al TextView del layout y al id del TextView
-        val resultado : TextView = findViewById(R.id.result_text)
-        //In rollDice set the random value that you got above as the
-        // Se genera un número aleatorio y se pone en el TextView para que cuando le des el boton aparezca un numero aleatorio
-        resultado.text = numeroAleatorio.toString()
-
-
+        val randomInt = (1 until 7).random()
+        val drawableResource = when (randomInt) {
+            1 -> R.drawable.cara1
+            2 -> R.drawable.cara2
+            3 -> R.drawable.cara3
+            4 -> R.drawable.cara4
+            5 -> R.drawable.cara5
+            else-> R.drawable.cara6
+        }
+        val imagen: ImageView = findViewById(R.id.image)
+        imagen.setImageResource(drawableResource)
     }
-}
+    }
+
