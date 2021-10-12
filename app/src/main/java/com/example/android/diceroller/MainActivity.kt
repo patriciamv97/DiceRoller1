@@ -26,6 +26,9 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
+    // Extraemos la variable ImageView
+    lateinit var diceImage: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,7 +40,9 @@ class MainActivity : AppCompatActivity() {
 
             rollDice()
         }
-        // Esta es mi rama donde ponga mi código
+        // Inicializamos la variable ImageView aquí
+        diceImage = findViewById(R.id.image)
+
     }
 
 
@@ -53,8 +58,7 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.cara5
             else-> R.drawable.cara6
         }
-        val imagen: ImageView = findViewById(R.id.image)
-        imagen.setImageResource(drawableResource)
+        diceImage.setImageResource(drawableResource)
     }
     }
 
