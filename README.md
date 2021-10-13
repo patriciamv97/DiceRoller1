@@ -23,6 +23,7 @@ Creamos en values  un nuevo fichero con el nombre strings dónde  cambiaremos el
 ![Foto](https://github.com/patriciamv97/DiceRoller1/blob/solucion/screenshots/2021-10-13%20(2).png)
 
 [Ejemplo](https://github.com/patriciamv97/DiceRoller1/commit/a06a6d666debe247cd51069a5cdac9c2a25bd94b)
+
 Estos strings se llaman en  el layout para para que los elementos de la aplicación cambien de idiomas.
 Ejemplo :
 
