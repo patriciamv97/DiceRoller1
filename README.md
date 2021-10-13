@@ -27,16 +27,18 @@ Creamos en values  un nuevo fichero con el nombre strings dónde  cambiaremos el
 Estos strings se llaman en  el layout para para que los elementos de la aplicación cambien de idiomas.
 Ejemplo :
 
+```ruby
 <Button  
 android:id="@+id/roll_button"  
 style="@style/Widget.MaterialComponents.Button.TextButton"  
 android:layout_width="wrap_content"  
 android:layout_height="wrap_content"  
 android:layout_gravity="center_horizontal"  
-<mark>  android:text="@string/roll"  </mark>
+ android:text="@string/roll"
 app:icon="@drawable/baseline_fingerprint_24"  
 app:layout_constraintEnd_toEndOf="parent"  
 app:layout_constraintStart_toStartOf="parent" />
+```
 
 ### Añadiendo imagenes
 
