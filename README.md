@@ -1,104 +1,68 @@
-# Make your First App - Dice Roller 
+## Readme explicativo :
+### Ejercicios del tutorial :
 
-This is the toy app for lesson 1 of the [Android App Development in Kotlin course on Udacity](https://www.udacity.com/course/developing-android-apps-with-kotlin--ud9012).
+-  Ejercicio1:
+   [Añadimos un botón](https://github.com/patriciamv97/DiceRoller1/commit/2eb6ab1e194ef76130b853138a9ed7215397ad72)
+   [Cambiamos la distribución del layout](https://github.com/patriciamv97/DiceRoller1/commit/1e2fa433a2fa3cd194f2f416bfc2da965584dd58)
+- Ejercicio 2 :
+  [Cambiamos el id del botón , se le asigna a una variable a través de findViewById y  añadimos una Toast  ](https://github.com/patriciamv97/DiceRoller1/commit/a2c494983bbe1f0649268e587a0b866dff5910eb)
+- Ejercicio 3 :
+  [Creamos una función que genere un número aleatorio y aparezca en el TextView](https://github.com/patriciamv97/DiceRoller1/commit/d040e174b40732b55298456d1f4eefe3ffee70ed)
+- Ejercicio 4 :
+  [Se añaden imágenes del dado al drawable y se modifica la función diceRoll para llamar a las imagenes](https://github.com/patriciamv97/DiceRoller1/commit/8242e68fe732e2e40317fc596647829829cb87b5)
+- Ejercicio 5 :
+  [Se extrae la variable ImageView con un lateInit ](https://github.com/patriciamv97/DiceRoller1/commit/1e2fa433a2fa3cd194f2f416bfc2da965584dd58)
+- Ejercicio 6 :
+  [Se habilita utilizar el VectorDrawable](https://github.com/patriciamv97/DiceRoller1/commit/d3ea3c9a60c09e61c485070661e22f2d5fcb1465)
 
-## Dice Roller
+### Strings con diferentes idiomas
 
-Dice Roller is a simple app that rolls a six sided die.
+Para compatibilizar una app con diferentes idiomas se utilizan los recursos de string,  en los cuales  almacenamos el contenido en un archivo xml en lugar de cargar el texto directamente desde el código
+Creamos en values  un nuevo fichero con el nombre strings dónde  cambiaremos el nombre de la app y el texto según idiomas.
 
+![Foto](https://github.com/patriciamv97/DiceRoller1/blob/solucion/screenshots/2021-10-13%20(2).png)
 
-## Screenshots
+[Ejemplo](https://github.com/patriciamv97/DiceRoller1/commit/a06a6d666debe247cd51069a5cdac9c2a25bd94b)
+Estos strings se llaman en  el layout para para que los elementos de la aplicación cambien de idiomas. Ejemplo :
 
-![Screenshot1](screenshots/screen0.png) ![Screenshot1](screenshots/screen1.png)
+<Button  
+android:id="@+id/roll_button"  
+style="@style/Widget.MaterialComponents.Button.TextButton"  
+android:layout_width="wrap_content"  
+android:layout_height="wrap_content"  
+android:layout_gravity="center_horizontal"  
+<mark>  android:text="@string/roll"  </mark>
+app:icon="@drawable/baseline_fingerprint_24"  
+app:layout_constraintEnd_toEndOf="parent"  
+app:layout_constraintStart_toStartOf="parent" />
 
-## How to use this repo while taking the course
+### Añadiendo imagenes
 
+Para utilizar imagenes se utiliza  ImageView.
+El control **ImageView** permite mostrar imágenes en la aplicación.
+Normalmente estas imágenes tendrán origen en el identificador de un    	recurso de nuestra carpeta _/res/drawable_,  y se id en el layout a través de la propiedad `android:src="@drawable/unaimagen"`.
 
-Each code repository in this class has a chain of commits that looks like this:
-
-![listofcommits](https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58befe2e_listofcommits/listofcommits.png)
-
-These commits show every step you'll take to create the app. Each commit contains instructions for completing the that step.
-
-Each commit also has a **branch** associated with it of the same name as the commit message, seen below:
-
-![branches](https://d17h27t6h515a5.cloudfront.net/topher/2017/April/590390fe_branches-ud855/branches-ud855.png
-)
-Access all branches from this tab
-
-![listofbranches](https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58befe76_listofbranches/listofbranches.png
-)
-
-
-![branchesdropdown](https://d17h27t6h515a5.cloudfront.net/topher/2017/April/590391a3_branches-dropdown-ud855/branches-dropdown-ud855.png
-)
-
-The branches are also accessible from the drop-down in the "Code" tab
-
-
-## Working with the Course Code
-
-Here are the basic steps for working with and completing exercises in the repo.
-
-The basic steps are:
-
-1. Clone the repo
-2. Checkout the branch corresponding to the step you want to attempt
-3. Find and complete the TODOs
-4. Optionally commit your code changes
-5. Compare your code with the solution
-6. Repeat steps 2-5 until you've gone trough all the steps to complete the toy app
+[Commit](https://github.com/patriciamv97/DiceRoller1/commit/8242e68fe732e2e40317fc596647829829cb87b5)
 
 
-**Step 1: Clone the repo**
 
-As you go through the course, you'll be instructed to clone the different exercise repositories, so you don't need to set these up now. You can clone a repository from github in a folder of your choice with the command:
+### Cambiando la función random
+Cambiamos la función ramdon por otra parecida que hace lo mismo,  se le da un rango en el que puede variar el valor obtenido.
+~~~
 
-```bash
-git clone https://github.com/udacity/REPOSITORY_NAME.git
-```
+randomInt = (1 until 7).random()
 
-**Step 2: Checkout the step branch**
+~~~
+[Commit](https://github.com/patriciamv97/DiceRoller1/commit/b6df0297a95064cea172db471ba64bf1bb4ea013)
 
-As you go through different steps in the code, you'll be told which step you're on, as well as a link to the corresponding branch.
+### Modificar el botón para usar material.io y que tenga asociado un icono
 
-You'll want to check out the branch associated with that step. The command to check out a branch would be:
-
-```bash
-git checkout BRANCH_NAME
-```
-
-**Step 3: Find and complete the TODOs**
-
-Once you've checked out the branch, you'll have the code in the exact state you need. You'll even have TODOs, which are special comments that tell you all the steps you need to complete the exercise. You can easily navigate to all the TODOs using Android Studio's TODO tool. To open the TODO tool, click the button at the bottom of the screen that says TODO. This will display a list of all comments with TODO in the project. 
-
-We've numbered the TODO steps so you can do them in order:
-![todos](https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58bf00e7_todos/todos.png
-)
-
-**Step 4: Commit your code changes**
-
-After You've completed the TODOs, you can optionally commit your changes. This will allow you to see the code you wrote whenever you return to the branch. The following git code will add and save **all** your changes.
-
-```bash
-git add .
-git commit -m "Your commit message"
-```
-
-**Step 5: Compare with the solution**
-
-Some exercises will have a list of steps for you to check off in the classroom. Once you've checked these off, you'll see a pop up window with a link to the solution code. Note the **Diff** link:
-
-![solutionwindow](https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58bf00f9_solutionwindow/solutionwindow.png
-)
-
-The **Diff** link will take you to a Github diff as seen below:
-![diff](https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58bf0108_diffsceenshot/diffsceenshot.png
-)
-
-All of the code that was added in the solution is in green, and the removed code (which will usually be the TODO comments) is in red. 
-
-You can also compare your code locally with the branch of the following step.
-
-## Report Issues
-Notice any issues with a repository? Please file a [github issue](https://github.com/udacity/andfun-kotlin-dice-roller/issues) in this repository.
+Para poder usar material.io y darle un estilo diferente al botón primero debemos implementar la librería en el build.gradle (Module) :    `'com.google.android.material:material:1.4.0'`
+y así poder acceder a sus recursos.
+Luego definimos el estilo en styles y lo  el estilo al elemento que deseemos modificar, en este caso el botón.
+Aplicaremos  `style="@style/Widget.MaterialComponents.Button.TextButton`
+para que el fondo del botón sea transparente.
+Para añadir un icono simplemente debes descargarlo y añadirlo a drawable, una vez añadido mediante la propiedad app:icon del botón lo llamas
+**Commits :**
+[Implementar Libreria](https://github.com/patriciamv97/DiceRoller1/commit/4a6b5d7ae581e59bc821b554aa5d49d6b8a84b8f)
+[Definir estilo](https://github.com/patriciamv97/DiceRoller1/commit/b69c5c6165b2370e3db83c95a876bd8d1601c9a3)
