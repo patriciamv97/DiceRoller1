@@ -33,7 +33,7 @@
         android:layout_marginTop="3dp"
         android:layout_gravity="center_horizontal"
         android:contentDescription="@null"
-        android:srcCompat="@drawable/imagen_base"
+        android:src="@drawable/imagen_base"
         android:visibility="visible" />
 
     <!-- Al poner android:text="@string/roll" El texto del boton cambia segun los string, es decir,
@@ -51,12 +51,3 @@
 
 </LinearLayout>
 
-    <!-- TODO (01) Remove the code above and add the LinearLayout code from the classroom -->
-
-    <!-- TODO (02) Add the Button
-         Use "wrap_content" for its width and height
-         Use "center_horizontal" for the layout_gravity -->
-
-    <!-- TODO (03) Position the views
-         Remember to set the orientation of the LinearLayout to vertical
-         and use layout_gravity to align the elements so they are centered as expected -->

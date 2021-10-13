@@ -32,21 +32,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // and assign it to an immutable variable called rollButton
         val rollButton : Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener{
-
-            //  Remove the Toast and instead create a method called rollDice here. You can
-
             rollDice()
         }
         // Inicializamos la variable ImageView aquí
         diceImage = findViewById(R.id.image)
 
     }
-
-
-
     // Función ramdon cambiada , antes : val numeroAleatorio =Random().nextInt(6)+1 , ahora :  val randomInt = (1 until 7).random()
     private fun rollDice(){
         val randomInt = (1 until 7).random()
