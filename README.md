@@ -23,7 +23,8 @@ Creamos en values  un nuevo fichero con el nombre strings dónde  cambiaremos el
 ![Foto](https://github.com/patriciamv97/DiceRoller1/blob/solucion/screenshots/2021-10-13%20(2).png)
 
 [Ejemplo](https://github.com/patriciamv97/DiceRoller1/commit/a06a6d666debe247cd51069a5cdac9c2a25bd94b)
-Estos strings se llaman en  el layout para para que los elementos de la aplicación cambien de idiomas. Ejemplo :
+Estos strings se llaman en  el layout para para que los elementos de la aplicación cambien de idiomas.
+Ejemplo :
 
 <Button  
 android:id="@+id/roll_button"  
@@ -64,5 +65,7 @@ Aplicaremos  `style="@style/Widget.MaterialComponents.Button.TextButton`
 para que el fondo del botón sea transparente.
 Para añadir un icono simplemente debes descargarlo y añadirlo a drawable, una vez añadido mediante la propiedad app:icon del botón lo llamas
 **Commits :**
+
 [Implementar Libreria](https://github.com/patriciamv97/DiceRoller1/commit/4a6b5d7ae581e59bc821b554aa5d49d6b8a84b8f)
+
 [Definir estilo](https://github.com/patriciamv97/DiceRoller1/commit/b69c5c6165b2370e3db83c95a876bd8d1601c9a3)
