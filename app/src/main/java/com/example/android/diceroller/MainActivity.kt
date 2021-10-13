@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    // text of the TextView
+    // Función ramdon cambiada , antes : val numeroAleatorio =Random().nextInt(6)+1 , ahora :  val randomInt = (1 until 7).random()
     private fun rollDice(){
         val randomInt = (1 until 7).random()
         val drawableResource = when (randomInt) {
