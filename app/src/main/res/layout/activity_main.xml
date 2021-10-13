@@ -36,7 +36,8 @@
         android:srcCompat="@drawable/imagen_base"
         android:visibility="visible" />
 
-
+    <!-- Al poner android:text="@string/roll" El texto del boton cambia segun los string, es decir,
+    segun los idiomas que se seleccione en el movil-->
     <Button
         android:id="@+id/roll_button"
         style="@style/Widget.MaterialComponents.Button.TextButton"
