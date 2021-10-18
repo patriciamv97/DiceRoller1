@@ -2,8 +2,9 @@
 ### Ejercicios del tutorial :
 
 -  Ejercicio1:
-   [Añadimos un botón](https://github.com/patriciamv97/DiceRoller1/commit/2eb6ab1e194ef76130b853138a9ed7215397ad72)
-   [Cambiamos la distribución del layout](https://github.com/patriciamv97/DiceRoller1/commit/1e2fa433a2fa3cd194f2f416bfc2da965584dd58)
+   [Añadimos un botón](https://github.com/patriciamv97/DiceRoller1/commit/2eb6ab1e194ef76130b853138a9ed7215397ad72)  
+   
+   [Cambiamos la distribución del layout](https://github.com/patriciamv97/DiceRoller1/commit/8242e68fe732e2e40317fc596647829829cb87b5)
 - Ejercicio 2 :
   [Cambiamos el id del botón , se le asigna a una variable a través de findViewById y  añadimos una Toast  ](https://github.com/patriciamv97/DiceRoller1/commit/a2c494983bbe1f0649268e587a0b866dff5910eb)
 - Ejercicio 3 :
